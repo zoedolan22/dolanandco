@@ -1,0 +1,95 @@
+/* Dolan & Co design system tokens: colour, type, spacing, radius. */
+:root {
+  --onyx: #000f08;
+  --deep-space-blue: #17364f;
+  --soft-periwinkle: #8584c2;
+  --rose-kiss: #ff70a6;
+  --parchment: #faf5ef;
+  --rose-wash: #ff70a633;
+
+  --surface: var(--parchment);
+  --ink: var(--onyx);
+  --ink-muted: var(--deep-space-blue);
+  --on-ink: var(--parchment);
+  --surface-panel: var(--deep-space-blue);
+  --on-panel: var(--parchment);
+  --surface-accent: var(--soft-periwinkle);
+  --on-periwinkle: var(--onyx);
+  --on-periwinkle-large: var(--parchment);
+  --accent: var(--rose-kiss);
+  --on-accent: var(--onyx);
+  --accent-word: var(--soft-periwinkle);
+  --line: var(--onyx);
+  --focus-ring: var(--deep-space-blue);
+  --focus-ring-on-panel: var(--parchment);
+  --focus-ring-on-periwinkle: var(--onyx);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 160px;
+  --space-12: 192px;
+
+  --radius-none: 0;
+  --radius-tight: 8px;
+  --radius-card: 32px;
+  --radius-block: 48px;
+  --radius-pill: 999px;
+
+  --border-hairline: 1px;
+  --border-outline: 1.5px;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  --font-display: "Bricolage Grotesque", "Arial Black", Arial, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-accent: "Instrument Serif", Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface: var(--onyx);
+    --ink: var(--parchment);
+    --ink-muted: var(--soft-periwinkle);
+    --on-ink: var(--onyx);
+    --accent-word: var(--rose-kiss);
+    --line: var(--parchment);
+    --focus-ring: var(--rose-kiss);
+  }
+}
+:root[data-theme="dark"] {
+  --surface: var(--onyx);
+  --ink: var(--parchment);
+  --ink-muted: var(--soft-periwinkle);
+  --on-ink: var(--onyx);
+  --accent-word: var(--rose-kiss);
+  --line: var(--parchment);
+  --focus-ring: var(--rose-kiss);
+}
+
+.display-xl { font-family: var(--font-display); font-size: 112px; line-height: 1; font-weight: 800; letter-spacing: 0.02em; }
+.display-lg { font-family: var(--font-display); font-size: 72px; line-height: 1.05; font-weight: 800; letter-spacing: 0.02em; }
+.display-md { font-family: var(--font-display); font-size: 48px; line-height: 1.05; font-weight: 800; letter-spacing: 0.02em; }
+.display-sm { font-family: var(--font-display); font-size: 32px; line-height: 1.1; font-weight: 800; letter-spacing: 0.02em; }
+.heading { font-family: var(--font-display); font-size: 20px; line-height: 1.1; font-weight: 800; letter-spacing: 0.02em; }
+.numeral { font-family: var(--font-display); font-size: 40px; line-height: 1; font-weight: 800; letter-spacing: 0.02em; }
+.button { font-family: var(--font-display); font-size: 16px; line-height: 1; font-weight: 800; letter-spacing: 0.02em; }
+.body-lg { font-family: var(--font-body); font-size: 20px; line-height: 1.5; font-weight: 400; letter-spacing: 0; }
+.body { font-family: var(--font-body); font-size: 16px; line-height: 1.5; font-weight: 400; letter-spacing: 0; }
+.body-sm { font-family: var(--font-body); font-size: 14px; line-height: 1.5; font-weight: 400; letter-spacing: 0; }
+.label { font-family: var(--font-body); font-size: 12px; line-height: 1.5; font-weight: 700; letter-spacing: 0.1em; }
+.accent-xl { font-family: var(--font-accent); font-size: 112px; line-height: 1; font-weight: 400; letter-spacing: 0; font-style: italic; }
+.accent-lg { font-family: var(--font-accent); font-size: 72px; line-height: 1; font-weight: 400; letter-spacing: 0; font-style: italic; }
+.accent-md { font-family: var(--font-accent); font-size: 48px; line-height: 1; font-weight: 400; letter-spacing: 0; font-style: italic; }
+.accent-sm { font-family: var(--font-accent); font-size: 32px; line-height: 1; font-weight: 400; letter-spacing: 0; font-style: italic; }
+
+@font-face { font-family: "Bricolage Grotesque"; src: url("fonts/BricolageGrotesque-Variable.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("fonts/Figtree-Variable.woff2") format("woff2"); font-weight: 300 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("fonts/InstrumentSerif-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
